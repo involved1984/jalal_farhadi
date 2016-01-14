@@ -8,8 +8,11 @@ var app = {
 	},
 
 	deviceReady: function() {
-		console.log('Running');		
-		ref = window.open(urlToLoad, '_blank', 'location=no,toolbar=no');
+		StatusBar.overlaysWebView(true);
+		StatusBar.styleDefault();
+		
+		
+		ref = window.open(urlToLoad, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 		
 		ref.addEventListener('loadstart', function(event) {
 			var tmpObject = document.getElementById('appContainer');

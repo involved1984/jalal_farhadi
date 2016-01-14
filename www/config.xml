@@ -4,7 +4,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
         xmlns:gap	= "http://phonegap.com/ns/1.0"
         id			= "se.hotmat.customer"
-		versionCode	= "1500000"
+		versionCode	= "1500001"
         version		= "1.5.0">
 
     <name>Hotmat</name>
@@ -64,6 +64,7 @@
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" /-->
     <gap:plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
+    <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
     <!--gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
