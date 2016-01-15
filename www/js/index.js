@@ -8,7 +8,7 @@ var app = {
 	},
 
 	deviceReady: function() {
-		StatusBar.overlaysWebView(true);
+		StatusBar.overlaysWebView(false);
 		StatusBar.styleDefault();
 		
 		
