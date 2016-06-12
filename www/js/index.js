@@ -12,7 +12,7 @@ var app = {
 		StatusBar.styleDefault();
 		
 		
-		ref = window.open(urlToLoad, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+		ref = window.open(urlToLoad, '_self', 'location=no,toolbar=no,disallowoverscroll=yes');
 		
 		ref.addEventListener('loadstart', function(event) {
 			var tmpObject = document.getElementById('appContainer');
