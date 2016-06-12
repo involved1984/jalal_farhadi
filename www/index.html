@@ -15,11 +15,20 @@
 			<input type="button" value="Försök igen" id="retryButton" onclick="app.deviceReady();">
 		</div>
 		<div id="appContainer">
-			<h1>Bama bil</h1>
-			<a href="http://behzad.se/jalal_farhadi/redirect.php" target="_self">Klicka här</a>
+			<h1>Hotmat.se</h1>
+			<div id="deviceready" class="blink">
+				<p class="event listening">Vänligen vänta</p>
+			</div>
 		</div>
 		<script type="text/javascript" src="cordova.js"></script>
-		
-	
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			if (window.location.href.indexOf('development') > 0){
+				app.deviceReady();
+			} else {
+				app.initialize();
+			}
+			
+		</script>
 	</body>
 </html>
