@@ -1,3 +1,3 @@
-# HotmatCustomerApp
-An application for customer to order food
+# BAMA Bil
+An application for BAMA Bil
 
