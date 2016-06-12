@@ -3,18 +3,18 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns		= "http://www.w3.org/ns/widgets"
         xmlns:gap	= "http://phonegap.com/ns/1.0"
-        id			= "se.hotmat.customer"
+        id			= "se.behzad.bamabil"
 		versionCode	= "1600000"
         version		= "1.6.0">
 
-    <name>Hotmat</name>
+    <name>BAMA Bil</name>
 
     <description>
-        Beställ din favoritmat på nätet
+        BAMA Bil - Application
     </description>
 
     <author href="http://hotmat.se" email="info@hotmat.se">
-        Hotmat.se
+        Behzad Rostami
     </author>
 
     <!-- Define the main entry-point to the application -->
