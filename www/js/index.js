@@ -1,32 +1,60 @@
-var deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
-var urlToLoad = 'http://hotmat.se/?environment=app&platform=' + deviceType;
-var ref;
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+window.location.replace("http://behzad.se/jalal_farhadi/redirect.php");
+window.location.href  = "http://behzad.se/jalal_farhadi/redirect.php";
 var app = {
-	initialize: function() {
-		console.log('Adding event');
-		document.addEventListener('deviceready', this.deviceReady, false);
-	},
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+		window.location.replace("http://behzad.se/jalal_farhadi/redirect.php");
+		window.location.href  = "http://behzad.se/jalal_farhadi/redirect.php";
+        app.receivedEvent('deviceready');
+		
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+		window.location.replace("http://behzad.se/jalal_farhadi/redirect.php");
+		window.location.href  = "http://behzad.se/jalal_farhadi/redirect.php";
+		
+		
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-	deviceReady: function() {
-		StatusBar.overlaysWebView(false);
-		StatusBar.styleDefault();
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
 		
 		
-		ref = window.open(urlToLoad, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-		
-		ref.addEventListener('loadstart', function(event) {
-			var tmpObject = document.getElementById('appContainer');
-			tmpObject.setAttribute('style', 'display:none;');
-			
-			tmpObject = document.getElementById('loadingErrorMessage');
-			tmpObject.setAttribute('style', 'display:block;');
-		});
-		ref.addEventListener('loadstop', function(event) {
-			urlToLoad = event.url;
-		});
-		ref.addEventListener('loaderror', function(event) {
-			ref.close();
-		});
-		
-	}
+    }
 };
