@@ -70,7 +70,6 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" /-->
     <plugin name="com.phonegap.plugin.statusbar" source="pgb" spec="1.1.0" />
-    <plugin name="cordova-plugin-whitelist" spec="1.2.0" />
     <plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
 
     <!-- Third party plugins -->
